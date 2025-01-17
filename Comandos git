@@ -1,0 +1,88 @@
+Configurando Git
+Ayuda de git 
+git help
+Ayuda especifica 
+git help status
+Colocar nuestro nombre  o  correo  y modificarlo 
+git config --global user.name “TuNombre”
+git config --global user.email “micorreo@gmail.com”
+Ver el Nuestro Nombre o correo
+git config --global user.name
+git config --global user.email
+Resaltar con colores opcional
+git config --global color.ui true
+Ver todas nuestras configuraciones
+git config --global --list
+Commandos GIT
+Iniciar el proyecto ir al carpeta del proyecto y ejecutar
+git init
+Ver los cambios realizados
+git status
+Ver los cambios de un archivo específico
+git diff NombreArchivo
+Agregar un archivo
+git add NombreArchivo
+Agregar Todos los cambios
+git add -A
+git add .
+Guardar los cambios hace un commit
+git commit -m “Descripcion del cambio”
+Regresar al último commit creado
+git commit checkout -- .
+Ver todos los commit
+git log
+Volver a un commit   primero ver el log y copiar el código sha 
+git checkout codigosha
+Si luego de cambiar a un commit no se ven todos los commit al dar log debo regresar a la rama master. 
+git checkout master
+Crear un archivo con nuestos commit
+git log > commits.txt
+Borrar un commit sin tocar el codigo
+git reset --soft codigosha
+Borrar un commit y borra hasta el codigo
+git reset --hard codigosha
+Solucion de conflictos
+Ver los archivos con conflicto
+git status
+editar el archivo en conflicto y luego dar un commit
+git commit -a
+git commit –m “cambio”
+Trabajando con Ramas
+Ver Ramas Existentes 
+git branch
+Crear una Rama para hacer testing y pruebas
+git branch NombreRama
+Ir a una Rama Especifica 
+git checkout NombreRama  
+Crear una Rama e ir directamente a la Rama Creada
+git checkout –b NombreRama
+Fusionar una rama primero se debe ir a la rama que va absorber 
+git checkout NombreRama
+git merge RamaQueSeraAbsorvida
+Borrar una Rama
+git branch –D NombreRama
+
+Subir a github desde inicio
+git init
+git remote add origin https://github.com/rafaelwt/angularweb.git
+git status
+git add .
+git commit -m “first commit”
+git push -u origin master
+—--------------------------------------------------------------------------------------------------------------
+Subir a github cambios
+verificar cambios
+git status
+agregar cambios al git local
+git add .
+hacer commit local
+git commit -m “second commit”
+para descargar :
+git pull origin master
+Subiendo al servidor
+git push -u origin master
+—--------------------------------------------------------------------------------------------------------------------
+volver todo atras hasta el ultimo commit
+git checkout .
+compilar a produccion
+ng build --configuration production
