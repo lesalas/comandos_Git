@@ -72,6 +72,10 @@ Borrar una Rama
   git add .
   git commit -m “first commit”  
   git push -u origin master
+-------------------------------------------------------------------------------------------------------------
+                                                  Clonar un repositorio de github 
+  Crear carpeta contenedora, abrir cmd - power shell - git brash
+  git clone https://github.com/rafaelwt/angularweb.git  
 —--------------------------------------------------------------------------------------------------------------
                                             Subir a github cambios
 verificar cambios
